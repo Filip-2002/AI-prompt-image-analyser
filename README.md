@@ -18,24 +18,6 @@ With organized input/output handling and customizable detection thresholds, the 
 - Results saved automatically as `[filename]_output.jpg` into `images/outputs/`
 
 
-## 🎥 Demo
-
-### Input:
-
-<img src="demo_pics/room.jpg" width="400">
-
-
-### Prompt:
-
-```bash
-rug, lamp, mountain
-```
-
-### Output:
-
-<img src="demo_pics/room_output.jpg" width="400">
-
-
 
 ## 🚀 Setup
 
