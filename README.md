@@ -73,12 +73,14 @@ If you have any problems scroll down to `⚠️ Notes`
 
    The default backbone is **SwinB (Base)**.  
    Download the weight and place it inside the `weights/` folder:
+   
+   ```bash
+   https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth
+   ```
 
-   `https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth`
-
-   - If you are having trouble running the Base model you can download SwinT (smallest, least accurate, fast)
-   - If your machine is powerful and can handle a bigger model you can download SwinL (largest, most accurate, slow)
-   - see `⚠️ Notes` for other weight download link
+   - If you are having trouble running the Base model you can download SwinT (smallest, least accurate, fast).
+   - If your machine is powerful and can handle a bigger model you can download SwinL (largest, most accurate, slow).
+   - see `⚠️ Notes` for other weight download link.
 
 5. Run:
    ```bash
@@ -90,11 +92,11 @@ If you have any problems scroll down to `⚠️ Notes`
 
 - Place your images in the `images/` folder. Outputs will be saved automatically in `images/outputs/`.
 
-- If doing multiple prompts for one image sepearte them with a comma (e.g., dog, window, tree, door).
+- If doing multiple prompts for one image separate them with commas (e.g., dog, window, tree, door).
 
 - To switch between backbones (SwinT/B/L), update `CONFIG_PATH` and `WEIGHTS_PATH` in `main.py`.
 
-- Download pretrained weights from `https://huggingface.co/ShilongLiu/GroundingDINO/tree/main` and move them into `weights/` folder.
+- Download pretrained weights from `https://huggingface.co/ShilongLiu/GroundingDINO/tree/main` and move them into the `weights/` folder.
   - **SwinT (Tiny)** - groundingdino_swint_ogc.pth
   - **SwinB (Base)** - groundingdino_swinb_cogcoor.pth
   - **SwinL (Large)** - groundingdino_swinl_cogcoor.pth
