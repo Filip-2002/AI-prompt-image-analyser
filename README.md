@@ -71,47 +71,33 @@ If you have any problems scroll down to `⚠️ Notes`
 
 4. Download model weights:
 
-   Default (SwinB - what this project uses)
+   The default backbone is **SwinB (Base)**.  
+   Download the weight and place it inside the `weights/` folder:
 
-   Windows
-
-   ```bash
-   Invoke-WebRequest -Uri "https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth" -OutFile "weights\groundingdino_swinb_cogcoor.pth"
-   ```
-
-   MacOS/Linux
-
-   If you have wget:
-
-   ```bash
-   wget -O weights/groundingdino_swinb_cogcoor.pth "https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth"
-   ```
-
-   If you have curl:
-
-   ```bash
-   curl -L "https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth" -o weights/groundingdino_swinb_cogcoor.pth
-   ```
+   `https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth`
 
    - If you are having trouble running the Base model you can download SwinT (smallest, least accurate, fast)
    - If your machine is powerful and can handle a bigger model you can download SwinL (largest, most accurate, slow)
-   - see `⚠️ Notes` for manual download link
+   - see `⚠️ Notes` for other weight download link
 
 5. Run:
    ```bash
    python main.py
+   
    
 
 ## ⚠️ Notes
 
 - Place your images in the `images/` folder. Outputs will be saved automatically in `images/outputs/`.
 
+- If doing multiple prompts for one image sepearte them with a comma (e.g., dog, window, tree, door).
+
 - To switch between backbones (SwinT/B/L), update `CONFIG_PATH` and `WEIGHTS_PATH` in `main.py`.
 
-- If you do not have `wget` or `curl` on Mac, you can download weights manually (`https://huggingface.co/ShilongLiu/GroundingDINO/tree/main`) and move them into `weights/`.
-  - SwinT (Tiny) - groundingdino_swint_ogc.pth
-  - SwinB (Base) - groundingdino_swinb_cogcoor.pth
-  - SwinL (Large) - groundingdino_swinl_cogcoor.pth
+- Download pretrained weights from `https://huggingface.co/ShilongLiu/GroundingDINO/tree/main` and move them into `weights/` folder.
+  - **SwinT (Tiny)** - groundingdino_swint_ogc.pth
+  - **SwinB (Base)** - groundingdino_swinb_cogcoor.pth
+  - **SwinL (Large)** - groundingdino_swinl_cogcoor.pth
 
 - By default the project runs on CPU. If you have a CUDA enabled GPU with PyTorch installed, you can change `device = "cuda"` in `main.py` for faster performance.
 
